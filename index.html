@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat Application</title>
+    <style>
+        /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Chat container */
+#chat-container {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* White background */
+}
+
+/* Messages area */
+#messages {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    padding: 10px; /* Padding for messages */
+    background-color: #f9f9f9; /* Light background for messages */
+}
+
+/* Individual message styling */
+.message {
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.message.sent {
+    background-color: #d1e7dd; /* Light green for sent messages */
+    align-self: flex-end; /* Align to the right */
+}
+
+.message.received {
+    background-color: #f8d7da; /* Light red for received messages */
+    align-self: flex-start; /* Align to the left */
+}
+
+/* Input field */
+#message-input {
+    flex-grow: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside input */
+    margin-bottom: 10px; /* Space below input */
+}
+
+/* Send button */
+#send-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#send-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="messages"></div>
+        <input id="message-input" type="text" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
